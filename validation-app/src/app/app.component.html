@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <form (ngSubmit)="validateForm()" #form="ngForm">
+      <h1 class="mb-4">Sample App</h1>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required [(ngModel)]="userData.username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required [(ngModel)]="userData.email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required [(ngModel)]="userData.password">
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirmPassword" required [(ngModel)]="userData.confirmPassword">
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required [(ngModel)]="userData.dob">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="ageAlertModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ageAlertModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ageAlertModalLabel">Age Alert</h5>
+        <button type="button" class="close" aria-label="Close" (click)="closeAgeAlertModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{{ ageAlert }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="closeAgeAlertModal()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
