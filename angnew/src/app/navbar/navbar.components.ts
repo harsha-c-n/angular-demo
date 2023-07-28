@@ -1,0 +1,525 @@
+<router-outlet></router-outlet>
+
+<body class="sb-nav-fixed">
+
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+
+        <a class="navbar-brand" href="index.html"><img src="assets/Logo.png" width="80%" height="120%" style="padding-top: 10px;"></a>
+
+        <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+
+        <!-- Navbar Search-->
+
+        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+
+            <div class="input-group">
+
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+
+                <div class="input-group-append">
+
+                    <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- Navbar-->
+
+        <ul class="navbar-nav ml-auto ml-md-0">
+
+            <li class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/id.jpg"  style="border-radius: 50%;" width="50px" height="50px"></a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+
+                    <a class="dropdown-item" href="#">Settings</a>
+
+                    <a class="dropdown-item" href="#">Activity Log</a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a class="dropdown-item" href="#" routerLink = "/login" routerLinkActive= "active">Logout</a>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_nav">
+
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+
+                <div class="sb-sidenav-menu">
+
+                    <div class="nav">
+
+                        <div class="sb-sidenav-menu-heading">Core</div>
+
+                        <a class="nav-link" href="index.html">
+
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+
+                            Dashboard
+
+                        </a>
+
+                        <div class="sb-sidenav-menu-heading">Interface</div>
+
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+
+                            <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+
+                            Home
+
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+
+                        </a>
+
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+
+                            <nav class="sb-sidenav-menu-nested nav">
+
+                                <a class="nav-link" href="#" routerLink = "/static">Profile</a>                 
+
+                            </nav>
+
+                        </div>
+
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+
+                            <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
+
+                            Settings
+
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+
+                        </a>
+
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+
+                                    Account Settings
+
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+
+                                </a>
+
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+
+                                    <nav class="sb-sidenav-menu-nested nav">
+
+                                        <a class="nav-link" href="#" routerLink = "/login" routerLinkActive = "active" >Login</a>
+
+                                        <a class="nav-link" href="#" routerLink = "/register" routerLinkActive = "active" >Register</a>
+
+                                        <a class="nav-link" href="#" routerLink = "/changepassword" routerLinkActive = "active">Change Password</a>
+
+                                    </nav>
+
+                                </div>
+
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+
+                                    Activity
+
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+
+                                </a>
+
+                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+
+                                    <nav class="sb-sidenav-menu-nested nav">
+
+                                        <a class="nav-link" href="401.html">401 Page</a>
+
+                                        <a class="nav-link" href="404.html">404 Page</a>
+
+                                        <a class="nav-link" href="500.html">500 Page</a>
+
+                                    </nav>
+
+                                </div>
+
+                            </nav>
+
+                        </div>
+
+                        <a class="nav-link collapsed" href="#">
+
+                            <div class="sb-nav-link-icon"><i class="fas fa-business-time"></i></div>
+
+                            Attendance
+
+                        </a>
+
+                        <a class="nav-link collapsed" href="#">
+
+                            <div class="sb-nav-link-icon"><i class="fas fa-money-check-alt"></i></div>
+
+                            Payroll
+
+                        </a>
+
+                        <a class="nav-link collapsed" href="#">
+
+                            <div class="sb-nav-link-icon"><i class="fas fa-plane"></i></div>
+
+                            Travel Expenses
+
+                        </a>
+
+                        <a class="nav-link collapsed" href="#">
+
+                            <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
+
+                            Confirmation
+
+                        </a>
+
+                        <a class="nav-link collapsed" href="#">
+
+                            <div class="sb-nav-link-icon"><i class="fas fa-cloud-download-alt"></i></div>
+
+                            Downloads
+
+                        </a>                 
+
+                    </div>
+
+                </div>
+
+                <div class="sb-sidenav-footer">
+
+                    <div class="small">Logged in as:</div>
+
+                    Admin
+
+                </div>
+
+            </nav>
+
+        </div>
+
+        
+
+        <div id="layoutSidenav_content">
+
+            <main>
+
+                <div class="container-fluid">
+
+                    <h1 class="mt-4">Kate Adams</h1>
+
+                    <ol class="breadcrumb mb-4">
+
+                        <li class="breadcrumb-item active">Dashboard</li>
+
+                    </ol>
+
+                    <div class="row">
+
+                        <div class="col-xl-3 col-md-6">
+
+                            <div class="card bg-primary text-white mb-4">
+
+                                <div class="card-body">Birthdays</div>
+
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+
+                                    <a class="small text-white stretched-link" href="#">View Details</a>
+
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+
+                            <div class="card bg-warning text-white mb-4">
+
+                                <div class="card-body">My Holidays</div>
+
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+
+                                    <a class="small text-white stretched-link" href="#">View Details</a>
+
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+
+                            <div class="card bg-success text-white mb-4">
+
+                                <div class="card-body">Company Anouncement</div>
+
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+
+                                    <a class="small text-white stretched-link" href="#">View Details</a>
+
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+
+                            <div class="card bg-danger text-white mb-4">
+
+                                <div class="card-body">Quick Links</div>
+
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+
+                                    <a class="small text-white stretched-link" href="#">View Details</a>
+
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-xl-6">
+
+                            <div class="card mb-4">
+
+                                <div class="card-header">
+
+                                    <i class="fas fa-chart-area mr-1"></i>
+
+                                    Weekly Analysis
+
+                                </div>
+
+                                <div class="card-body"><img src="assets/Areachart.PNG" width="100%" height="280"></div> 
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-6">
+
+                            <div class="card mb-4">
+
+                                <div class="card-header">
+
+                                    <i class="fas fa-chart-bar mr-1"></i>
+
+                                    Monthly Report
+
+                                </div>
+
+                                <div class="card-body"><img src="assets/barchart.PNG" width="100%" height="280"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card mb-4">
+
+                        <div class="card-header">
+
+                            <i class="fas fa-table mr-1"></i>
+
+                            Employee Data
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="table-responsive">
+
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>Name</th>
+
+                                            <th>Position</th>
+
+                                            <th>Office</th>
+
+                                            <th>Age</th>
+
+                                            <th>Start date</th>
+
+                                            <th>Salary</th>
+
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+
+                                            <td>Tiger Nixon </td>
+
+                                            <td>System Architect</td>
+
+                                            <td>Edinburgh</td>
+
+                                            <td>61</td>
+
+                                            <td>2011/04/25</td>
+
+                                            <td>$320,800</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Garrett Winters</td>
+
+                                            <td>Accountant</td>
+
+                                            <td>Tokyo</td>
+
+                                            <td>63</td>
+
+                                            <td>2011/07/25</td>
+
+                                            <td>$170,750</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Ashton Cox</td>
+
+                                            <td>Junior Technical Author</td>
+
+                                            <td>San Francisco</td>
+
+                                            <td>66</td>
+
+                                            <td>2009/01/12</td>
+
+                                            <td>$86,000</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Cedric Kelly</td>
+
+                                            <td>Senior Javascript Developer</td>
+
+                                            <td>Edinburgh</td>
+
+                                            <td>22</td>
+
+                                            <td>2012/03/29</td>
+
+                                            <td>$433,060</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Airi Satou</td>
+
+                                            <td>Accountant</td>
+
+                                            <td>Tokyo</td>
+
+                                            <td>33</td>
+
+                                            <td>2008/11/28</td>
+
+                                            <td>$162,700</td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+            <footer class="py-4 bg-light mt-auto">
+
+                <div class="container-fluid">
+
+                    <div class="d-flex align-items-center justify-content-between small">
+
+                        <div class="text-muted">Copyright &copy; Simplilearn 2021  </div>
+
+                        <div>
+
+                            <a href="#">Privacy Policy</a>
+
+                            &middot;
+
+                            <a href="#">Terms &amp; Conditions</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <script src="js/scripts.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+
+    <script src="assets/demo/chart-area-demo.js"></script>
+
+    <script src="assets/demo/chart-bar-demo.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+
+    <script src="assets/demo/datatables-demo.js"></script>
+
+</body>
